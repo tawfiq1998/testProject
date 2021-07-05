@@ -6,21 +6,14 @@
  * v:1.0.0 last update 2021/7/5
  * */
 import React, { useContext, useState } from "react";
-<<<<<<< HEAD
 import { Button, TextInput, View } from "react-native";
-=======
 import { Button, Text, TextInput, View } from "react-native";
->>>>>>> pro
 import {Context} from "../context/AuthContext";
 
 
 const VerificationScreen=()=>{
   const [varNum,setVarNum]=useState("")
-<<<<<<< HEAD
-  const {checkVarCod}=useContext(Context);
-=======
   const {state,checkVarCod}=useContext(Context);
->>>>>>> pro
 
   return(
     <View style={{flex:1,justifyContent:'center',alignContent :'center',marginHorizontal:10}}>
@@ -28,10 +21,7 @@ const VerificationScreen=()=>{
       <View style={{marginHorizontal:110}}><Button title="submit" onPress={()=> {
         checkVarCod(varNum );
       }} />
-<<<<<<< HEAD
-=======
         {state.errorMessage?<Text>wrong cardinals</Text>:null}
->>>>>>> pro
       </View>
     </View>
   )
