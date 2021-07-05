@@ -6,7 +6,7 @@
  * v:1.0.0 last update 2021/7/5
  * */
 import React, { useContext, useState } from "react";
-import { Button, TextInput, View ,Text} from "react-native";
+import { Button, TextInput, View,Text } from "react-native";
 import {Context} from "../context/AuthContext";
 
 

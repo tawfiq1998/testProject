@@ -34,14 +34,15 @@ const Slider = () => {
       pages={[
         {
           backgroundColor: "#fff",
-          image: <Feather name="check" size={100} color='#18a8aa'/>,
-          title: "طرق الانتقال",
-          subtitle: "الانتقال المباشر من خلال الرذاذ من المريض اثناء السعال",
+          image: <Feather name="coffee" size={100} color='#18a8aa'/>,
+
+          title: "اهلا بكم",
+          subtitle: "في تطبيقنا",
         }, {
           backgroundColor: "#fff",
-          image: <Feather name="coffee" size={100} color='#18a8aa'/>,
-          title: "اعراض الاصابة",
-          subtitle: "ارتفاع في درجة الحرابة \n قيء \n سعال جاف"
+          image: <Feather name="check" size={100} color='#18a8aa'/>,
+          title: "نمتاز بالتالي",
+          subtitle: "المصداقية \n الموضوعية \n السرعة"
 
         }, {
           backgroundColor: "#fff",
