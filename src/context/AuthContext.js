@@ -55,7 +55,11 @@ const getVarCode = (dispatch) => {
         dispatch({ type: "add_error", payload: "Wrong cardinal" });
       }
     } catch (err) {
+<<<<<<< HEAD
       console.log(err);
+=======
+      dispatch({ type: "add_error", payload: "Wrong cardinal" });
+>>>>>>> pro
     }
 
   };
@@ -75,8 +79,17 @@ const checkVarCod = (dispatch) => {
       const token = await AsyncStorage.getItem('token');
       dispatch({ type: "signin", payload: token });
       const info = JSON.parse(await CustomMod.getUserInfo(token));
+<<<<<<< HEAD
       dispatch({ type: "loadInfo", payload: info });
       navigate("HomePage");
+=======
+      if (info){
+      dispatch({ type: "loadInfo", payload: info });
+      navigate("HomePage");}
+      else {
+        dispatch({ type: "add_error", payload: "Wrong cardinal" });
+      }
+>>>>>>> pro
     } else {
       dispatch({ type: "add_error", payload: "Wrong cardinal" });
     }
@@ -90,10 +103,21 @@ const checkVarCod = (dispatch) => {
 const createAccount = (dispatch) => {
   return async (inId, PolId, dob) => {
     const info=JSON.parse(await CustomMod.createAcc(inId, PolId, dob))
+<<<<<<< HEAD
 
     AsyncStorage.setItem("token", info.access_token);;
     checkIfSignedIn();
     navigate("HomePage");
+=======
+    if (info) {
+      AsyncStorage.setItem("token", info.access_token);
+      checkIfSignedIn();
+      navigate("HomePage");
+    }
+    else {
+      dispatch({ type: "add_error", payload: "Wrong cardinal" });
+    }
+>>>>>>> pro
 
   };
 };
